@@ -6,7 +6,15 @@ $('.second').on('click', () => {
     $('.first').text('Clicked on the second')
   });
 
-  $('.third').click(() => {
-    $('button').css('background', 'purple');
-    $('button').css('color', 'white');
+let color;
+
+$('.third').click(() => {
+    if ($('.input').val() === "") {
+        color = "blue";
+    } else {
+        color = $('.input').val();
+    };
+    $('button').css('background', `${color}`);
   });
+
+
