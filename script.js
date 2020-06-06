@@ -8,7 +8,7 @@ $('.second').on('click', () => {
 
 let color;
 
-$('.third').click(() => {
+$('.third').one('click', () => {
     if ($('.input').val() === "") {
         color = "blue";
     } else {
